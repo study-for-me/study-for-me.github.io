@@ -6,7 +6,7 @@
   <link href="https://study-for-me.github.io/atom.xml" rel="self"/>
   
   <link href="https://study-for-me.github.io/"/>
-  <updated>2022-06-16T14:37:43.474Z</updated>
+  <updated>2022-06-16T15:05:36.978Z</updated>
   <id>https://study-for-me.github.io/</id>
   
   <author>
@@ -17,19 +17,19 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="https://study-for-me.github.io/2022/06/16/promise-axios/"/>
-    <id>https://study-for-me.github.io/2022/06/16/promise-axios/</id>
-    <published>2022-06-16T14:37:32.564Z</published>
-    <updated>2022-06-16T14:37:43.474Z</updated>
+    <title>Promise + Axios学习笔记（含源码分析）</title>
+    <link href="https://study-for-me.github.io/2022/06/16/promise-axios-xue-xi-bi-ji-han-yuan-ma-fen-xi/"/>
+    <id>https://study-for-me.github.io/2022/06/16/promise-axios-xue-xi-bi-ji-han-yuan-ma-fen-xi/</id>
+    <published>2022-06-16T15:04:56.000Z</published>
+    <updated>2022-06-16T15:05:36.978Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;AJAX&quot;&gt;&lt;a href=&quot;#AJAX&quot; class=&quot;headerlink&quot; title=&quot;AJAX&quot;&gt;&lt;/a&gt;AJAX&lt;/h1&gt;&lt;p&gt;定义：异步的js和xml&lt;/p&gt;
-&lt;h3 id=&quot;优点：&quot;&gt;&lt;a href=&quot;#优点：&quot;</summary>
+    <summary type="html">&lt;hr&gt;
+&lt;h2 id=&quot;abbrlink-1&quot;&gt;&lt;a href=&quot;#abbrlink-1&quot; class=&quot;headerlink&quot; title=&quot;abbrlink: 1&quot;&gt;&lt;/a&gt;abbrlink: 1&lt;/h2&gt;&lt;h1 id=&quot;AJAX&quot;&gt;&lt;a href=&quot;#AJAX&quot;</summary>
         
       
     
