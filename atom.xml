@@ -6,7 +6,7 @@
   <link href="https://study-for-me.github.io/atom.xml" rel="self"/>
   
   <link href="https://study-for-me.github.io/"/>
-  <updated>2022-05-15T04:15:25.822Z</updated>
+  <updated>2022-06-16T14:37:43.474Z</updated>
   <id>https://study-for-me.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://study-for-me.github.io/2022/06/16/promise-axios/"/>
+    <id>https://study-for-me.github.io/2022/06/16/promise-axios/</id>
+    <published>2022-06-16T14:37:32.564Z</published>
+    <updated>2022-06-16T14:37:43.474Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;AJAX&quot;&gt;&lt;a href=&quot;#AJAX&quot; class=&quot;headerlink&quot; title=&quot;AJAX&quot;&gt;&lt;/a&gt;AJAX&lt;/h1&gt;&lt;p&gt;定义：异步的js和xml&lt;/p&gt;
+&lt;h3 id=&quot;优点：&quot;&gt;&lt;a href=&quot;#优点：&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>hexo+github来搭建个人博客</title>
