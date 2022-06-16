@@ -1173,12 +1173,14 @@ instance<span class="token punctuation">.</span><span class="token keyword">get<
  ## axios源码分析
 
  ### axios与Axios的关系？
+
  * 1.从语法上来说：axios不是Axios的实例 （axios是函数）
  * 2.从功能上来说： axios是Axios的实例（可以axios.get()等来使用Axios原型上的方法，但是它也保持函数特性，可以直接函数方式来调用）
  * 3.axios是Axios.prototype.request函数bind()返回的函数（bind()返回一个request.call(xx)函数,本质axios是调用request方法，只是this发生改变，让axios可以有Axios属性时，像函数一样使用）
  * 4.axios作为对象有Axios原型对象上的所有方法，有Axios对象上的所有属性
  
 ### instance与axios的区别？
+
 instace = axios.create(),axios从语法上不是Axios的实例，从功能上是它的实例，它可以像函数一样使用，但是也有Axios原型的属性方法，并不是通过new xx来的，
 * 相同：
     * 都是一个能发任意请求的函数，request(config)
@@ -1202,7 +1204,7 @@ request(config) =&gt; dispatchRequest(config) =&gt; xhrAdapter(config)
 请求拦截器unshift,响应拦截器push =&gt;
 **请求拦截器后添加，先执行**
 * request流程图
-```js
+
 example: 
 requestInterceptors1:(fulfilled1,rejected1)
 responseInterceptors2:(fulfilled2,rejected2)
@@ -1218,31 +1220,28 @@ promise链回调： config
 =&gt; (fulfilled11,rejected11) =&gt; (fulfilled22,rejected22)
 // axios发请求的回调处理 
 =&gt; (onResolved, onRejected)
-</code></pre>
-<img src="./media/拦截器.png">
 
-<ul>
-<li><p>request(config)<br>将请求拦截器|dispatchRequest() | 响应拦截器，通过promise串连起来，返回promise</p>
-</li>
-<li><p>dispatchRequest(config)<br>转换请求数据 &#x3D;&gt; 调用xhrAdapter发请求 &#x3D;&gt; 请求返回，转换响应数据,返回promise</p>
-</li>
-<li><p>xhrAdapter(config)<br>创建xhr，根据config进行设置，发送特定请求，并接收响应数据，返回promise，（成功带response,失败带error）</p>
-</li>
-</ul>
-<h3 id="如何取消未完成的请求"><a href="#如何取消未完成的请求" class="headerlink" title="如何取消未完成的请求"></a>如何取消未完成的请求</h3><ul>
-<li>当配置了cancelToken对象时，保存cancel函数<ul>
-<li>创建用于将来中断请求的cancelPromise</li>
-<li>并定义一个用于取消请求的cancel函数</li>
-<li>将cancel函数传递出来</li>
-</ul>
-</li>
-<li>调用cancel取消请求<ul>
-<li>执行cancel函数，传入错误信息message</li>
-<li>内部让cancelPromise变为成功，成功值为Cancel对象</li>
-<li>cancelPromise的成功回调中断请求，并让请求的promise失败，失败的reason为Cacel对象(取消请求时，取消函数返回成功的promise，值是取消的对象，相对于请求的回调返回应该是失败的promise，值是取消的对象)</li>
-</ul>
-</li>
-</ul>
+&lt;img src=&quot;./media/拦截器.png&quot;&gt;
+
+* request(config)
+将请求拦截器|dispatchRequest() | 响应拦截器，通过promise串连起来，返回promise
+
+* dispatchRequest(config)
+转换请求数据 =&gt; 调用xhrAdapter发请求 =&gt; 请求返回，转换响应数据,返回promise
+
+* xhrAdapter(config)
+创建xhr，根据config进行设置，发送特定请求，并接收响应数据，返回promise，（成功带response,失败带error）
+
+### 如何取消未完成的请求
+* 当配置了cancelToken对象时，保存cancel函数
+    * 创建用于将来中断请求的cancelPromise
+    * 并定义一个用于取消请求的cancel函数
+    * 将cancel函数传递出来
+* 调用cancel取消请求
+    * 执行cancel函数，传入错误信息message
+    * 内部让cancelPromise变为成功，成功值为Cancel对象
+    * cancelPromise的成功回调中断请求，并让请求的promise失败，失败的reason为Cacel对象(取消请求时，取消函数返回成功的promise，值是取消的对象，相对于请求的回调返回应该是失败的promise，值是取消的对象)
+</code></pre>
 
                 
             </div>
